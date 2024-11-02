@@ -3,7 +3,7 @@ name: Deploy to Firebase Hosting on merge
 on:
   push:
     branches:
-      - main  # Specify the branch you want to deploy from
+      - main
 
 jobs:
   build_and_deploy:
@@ -11,14 +11,17 @@ jobs:
 
     steps:
     - name: Checkout Repository
-      uses: actions/checkout@v3  # Update to v3 for the latest Node version support
+      uses: actions/checkout@v3
 
     - name: Install Node.js
-      uses: actions/setup-node@v3  # Update to v3 for Node.js support
+      uses: actions/setup-node@v3
       with:
-        node-version: '20'  # Use Node 20 as suggested by the warning
+        node-version: '20'
 
-    - name: Install Dependencies
+    - name: Install Firebase CLI
+      run: npm install -g firebase-tools  # Ensure latest Firebase CLI
+
+    - name: Install Project Dependencies
       run: npm install
 
     - name: Deploy to Firebase Hosting
