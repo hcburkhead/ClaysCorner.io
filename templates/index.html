@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<title>Clay's Corner</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Header Navigation -->
+<div class="top-nav">
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#community">Community</a>
+    <a href="#skills">Skills & Languages</a>
+  </div>
+  <input type="text" class="search-box" placeholder="Search...">
+</div>
+
+<!-- Main Container with Background and Sidebar -->
+<div class="main-container">
+  <!-- Background Image and Text Overlay -->
+  <div class="background-container">
+    <h1>Clay's Corner</h1>
+  </div>
+
+  <!-- Sidebar Profile Section -->
+  <div class="sidebar-container">
+    <div class="portfolio-image-container" onclick="openYouTube()" onmouseover="startPouring()" onmouseout="startReversing()">
+      <img src="clay2.png" class="original-image" alt="Profile Picture">
+      <img id="pouringGif" src="change2.gif" class="youtube-gif" alt="YouTube Pouring Animation">
+      <img id="reverseGif" src="change2-reverse.gif" class="youtube-reverse-gif" alt="Reverse Animation">
+    </div>
+
+    <h2>Hayden C<br>Burkhead</h2>
+    
+    <ul>
+      <li>IT experience: 3.5 years</li>
+      <li>AS in Computer Science</li>
+      <li>CompTIA A+ Certified</li>
+    </ul>
+
+    <p class="contact-info">hcburkhead@gmail.com</p>
+
+    <!-- Social Icons (Replace with actual links or icons) -->
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-linkedin-in"></i>Linkedin</a>
+      <a href="#"><i class="fab fa-facebook"></i>Facebook</a>
+      <a href="#"><i class="fab fa-twitter"></i>Twitter</a>
+      <a href="#"><i class="fab fa-instagram"></i>Instagram</a>
+      <a href="#"><i class="fab fa-youtube"></i>YouTube</a>
+    </div>
+
+    <a href="#portfolio">View Portfolio</a>
+  </div>
+</div>
+
+<!-- Content Sections -->
+<section id="about">
+  <h2>About</h2>
+  <p>This is the About section content.</p>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <p>This is the Projects section content.</p>
+</section>
+
+<section id="community">
+  <h2>Community</h2>
+  <p>This is the Community section content.</p>
+</section>
+
+<section id="skills">
+  <h2>Skills & Languages</h2>
+  <p>This is the Skills & Languages section content.</p>
+</section>
+
+<!-- Optional Footer Chat Button -->
+<div class="footer-chat-button">
+  <i class="fas fa-comment"></i> Let's Chat!
+</div>
+
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<script src="main.js"></script>
+</body>
+</html>

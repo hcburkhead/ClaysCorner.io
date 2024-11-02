@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+  color: white;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Header Navigation */
+.top-nav {
+  background-color: black;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-nav a {
+  color: #f2f2f2;
+  padding: 10px;
+  font-size: 17px;
+}
+
+.top-nav a:hover {
+  background-color: gray;
+  color: white;
+}
+
+.top-nav .search-box {
+  border: 1px solid white;
+  padding: 5px;
+  color: white;
+  background: black;
+}
+
+/* Main Layout */
+.main-container {
+  display: flex;
+  height: calc(100vh - 50px); /* Full height minus header */
+}
+
+/* Background Image and Text Overlay */
+.background-container {
+  flex: 3;
+  background-image: url('bg2.jpg'); /* Use your background image here */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 60px;
+}
+
+.background-container h1 {
+  font-family: 'Ubuntu Mono', monospace;
+  font-size: 48px;
+  font-weight: bold;
+  color: white;
+  margin: 0;
+}
+
+.background-container p {
+  font-size: 24px;
+  color: lightgray;
+  margin-top: 10px;
+}
+
+/* Sidebar Profile Section */
+.sidebar-container {
+  flex: 1;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.portfolio-image-container {
+  position: relative;
+  width: 120px; /* Set fixed width */
+  height: 120px; /* Set fixed height */
+  cursor: pointer;
+  overflow: hidden;
+  margin: 0 auto; /* Center the image container */
+}
+
+.portfolio-image-container img {
+  width: 100%; /* Make images fit within container */
+  height: 100%; /* Maintain container dimensions */
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.6s ease;
+}
+
+.original-image {
+  z-index: 1;
+}
+
+.youtube-gif, .youtube-reverse-gif {
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.portfolio-image-container:hover .youtube-gif {
+  opacity: 1;
+}
+
+.portfolio-image-container:hover .original-image {
+  opacity: 0;
+}
+
+.sidebar-container h2 {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin: 15px 0 5px;
+  line-height: 1.2;
+}
+
+.sidebar-container ul {
+  padding: 0 20px; /* Add padding for bullet alignment if needed */
+  margin: 10px 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: lightgray;
+  list-style-type: disc; /* Ensures bullets are displayed */
+}
+
+.sidebar-container .contact-info {
+  margin-top: 15px;
+  font-size: 14px;
+  color: lightgray;
+  text-align: center;
+}
+
+.sidebar-container .social-icons {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.sidebar-container .social-icons a {
+  color: white;
+  font-size: 20px;
+}
+
+/* Footer Button (Optional) */
+.footer-chat-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #000;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.footer-chat-button:hover {
+  background-color: #333;
+}
